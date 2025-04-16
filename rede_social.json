@@ -1,0 +1,11 @@
+{
+    "usuarios": ["Ana", "Bruno", "Carlos", "Diana", "Eva", "Felipe"],
+    "amizades": [
+      ["Ana", "Bruno"],
+      ["Bruno", "Carlos"],
+      ["Carlos", "Felipe"],
+      ["Felipe", "Diana"],
+      ["Diana", "Eva"],
+      ["Eva", "Ana"]
+    ]
+  }  

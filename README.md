@@ -39,16 +39,7 @@ DFS(grafo):
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: Python (qualquer versão a partir da versão partir da 3.6.)<br>
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
-
-
-
-
+Após garantir a instalação do Python, para rodar o código de BFS basta estar na pasta do projeto e digitar "python bfs.py" no terminal. De maneira análoga, para rodar o código de BFS basta estar na página do projeto e digitar "python dfs.py".
