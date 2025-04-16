@@ -53,5 +53,5 @@ for u1, u2 in dados["amizades"]:
     rede.adicionar_amizade(u1, u2)
 
 # --- Teste com dois usuários qualquer ---
-# Aqui estamos consultando o grau de separação entre "Ana" e "Felipe"
+# Aqui estamos consultando o grau de separação entre "Carlos" e "Felipe"
 print("Grau de separação entre Carlos e Felipe:", rede.grau_de_separacao("Carlos", "Felipe"))
