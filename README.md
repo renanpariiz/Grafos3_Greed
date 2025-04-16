@@ -44,8 +44,7 @@ Funcionamento do BFS:
 
 Funcionamento do DFS:
 <center>
-  <img src="assets/dfs1.png" alt="DFS">
-  <img src="assets/dfs2.png" alt="DFS">
+  <img src="assets/dfs.png" alt="DFS">
 
 </center>
 
