@@ -54,4 +54,4 @@ for u1, u2 in dados["amizades"]:
 
 # --- Teste com dois usuários qualquer ---
 # Aqui estamos consultando o grau de separação entre "Ana" e "Felipe"
-print("Grau de separação entre Bruno e Eva:", rede.grau_de_separacao("Bruno", "Eva"))
+print("Grau de separação entre Carlos e Felipe:", rede.grau_de_separacao("Carlos", "Felipe"))
