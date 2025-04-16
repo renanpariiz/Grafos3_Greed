@@ -37,8 +37,10 @@ DFS(grafo):
 
 ## Screenshots
 Funcionamento do BFS:
-![BFS](assets/bfs1.jpg)
-![BFS](assets/bfs2.jpg)
+<center>
+  <img src="assets/bfs1.jpg" alt="BFS">
+  <img src="assets/bfs2.jpg" alt="BFS">
+</center>
 
 Funcionamento do DFS:
 ![DFS](assets/dfs.jpg)
