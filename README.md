@@ -36,7 +36,11 @@ DFS(grafo):
 - Identifica componentes conectados (grupos independentes na rede)
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+Funcionamento do BFS:
+![BFS](assets/bfs.jpg)
+
+Funcionamento do DFS:
+![DFS](assets/dfs.jpg)
 
 ## Instalação 
 **Linguagem**: Python (qualquer versão a partir da versão partir da 3.6.)<br>
