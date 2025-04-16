@@ -1,51 +1,64 @@
-import json  # Importa a biblioteca para leitura de arquivos JSON
-from collections import defaultdict  # defaultdict: dicionário com valor padrão (lista)
+import json
+from collections import defaultdict
 
-# Classe que representa a rede social usando o algoritmo de DFS
-class RedeSocialDFS:
+# Classe que representa a rede social como um grafo (estrutura de nós e conexões)
+class RedeSocial:
     def __init__(self):
+        # Utilizamos um dicionário onde cada usuário é uma chave
+        # e seu valor é uma lista de amigos (vizinhos no grafo)
         self.grafo = defaultdict(list)
 
+    # Adiciona um novo usuário à rede, caso ainda não exista
     def adicionar_usuario(self, usuario):
         if usuario not in self.grafo:
             self.grafo[usuario] = []
 
+    # Cria uma amizade (conexão bidirecional) entre dois usuários
     def adicionar_amizade(self, usuario1, usuario2):
         self.grafo[usuario1].append(usuario2)
         self.grafo[usuario2].append(usuario1)
 
-    # Algoritmo de busca em profundidade (DFS) para encontrar o grau de separação
-    def grau_de_separacao(self, origem, destino):
-        visitado = set()
-        return self._dfs(origem, destino, visitado, 0)
+    # Busca em profundidade para encontrar "componentes conexas"
+    # Ou seja, grupos de usuários que estão todos conectados de alguma forma
+    def encontrar_componentes_conexas(self):
+        visitado = set()     # Conjunto para marcar usuários já visitados
+        componentes = []     # Lista de todos os grupos encontrados
 
-    def _dfs(self, atual, destino, visitado, grau):
-        if atual == destino:
-            return grau
+        # Função recursiva de busca em profundidade (DFS)
+        def dfs(usuario, componente):
+            visitado.add(usuario)         # Marca o usuário como visitado
+            componente.append(usuario)    # Adiciona ao grupo atual
+            for vizinho in self.grafo[usuario]:  # Percorre os amigos
+                if vizinho not in visitado:
+                    dfs(vizinho, componente)
 
-        visitado.add(atual)
+        # Verifica cada usuário da rede
+        for usuario in self.grafo:
+            if usuario not in visitado:
+                componente = []           # Cria um novo grupo
+                dfs(usuario, componente)  # Inicia a DFS a partir dele
+                componentes.append(componente)  # Salva o grupo encontrado
 
-        for vizinho in self.grafo[atual]:
-            if vizinho not in visitado:
-                resultado = self._dfs(vizinho, destino, visitado, grau + 1)
-                if resultado != -1:
-                    return resultado
+        return componentes
 
-        return -1  # Caso não encontre caminho
-
-# --- Leitura do JSON ---
+# Leitura do arquivo JSON com os dados da rede social 
 with open("rede_social.json", "r") as arquivo:
     dados = json.load(arquivo)
 
-# Cria uma instância da rede social com DFS
-rede = RedeSocialDFS()
+rede = RedeSocial()
 
-# Adiciona usuários e amizades
+# Adiciona todos os usuários presentes no JSON à rede
 for u in dados["usuarios"]:
     rede.adicionar_usuario(u)
 
+# Adiciona todas as amizades (conexões) entre os usuários
 for u1, u2 in dados["amizades"]:
     rede.adicionar_amizade(u1, u2)
-    
-# Teste: grau de separação entre dois usuários
-print("Grau de separação entre Ana e Diana:", rede.grau_de_separacao("Ana", "Diana"))
+
+# Exibição dos grupos (componentes conexas)
+componentes = rede.encontrar_componentes_conexas()
+
+# Mostra cada grupo encontrado, com os nomes dos membros
+for i, grupo in enumerate(componentes, start=1):
+    membros = ", ".join(grupo)  # Junta os nomes separados por vírgula
+    print(f"Grupo {i}: {membros}")
