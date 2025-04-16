@@ -49,4 +49,5 @@ Funcionamento do DFS:
 **Linguagem**: Python (qualquer versão a partir da versão partir da 3.6.)<br>
 
 ## Uso 
-Após garantir a instalação do Python, para rodar o código de BFS basta estar na pasta do projeto e digitar `python bfs.py` no terminal. De maneira análoga, para rodar o código de BFS basta estar na página do projeto e digitar `python dfs.py`.
+Após garantir a instalação do Python, para rodar o código de BFS basta estar na pasta do projeto e digitar `python bfs.py` no terminal. 
+De maneira análoga, para rodar o código de DFS basta estar na página do projeto e digitar `python dfs.py`.
