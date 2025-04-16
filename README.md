@@ -43,7 +43,9 @@ Funcionamento do BFS:
 </center>
 
 Funcionamento do DFS:
-![DFS](assets/dfs.jpg)
+<center>
+  <img src="assets/dfs.jpg" alt="DFS">
+</center>
 
 ## Instalação 
 **Linguagem**: Python (qualquer versão a partir da versão partir da 3.6.)<br>
