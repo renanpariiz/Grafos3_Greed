@@ -36,7 +36,7 @@ DFS(grafo):
 - Identifica componentes conectados (grupos independentes na rede)
 
 ### Vídeo da Apresentação:
-Aqui está disponível o [vídeo](https://youtu.be/7YNiwFkt3HU?si=U1KO09NTYJqX9MZH) da apresentação do projeto.
+Aqui está disponível o [vídeo](https://youtu.be/rih0g0mAFKs?feature=shared) da apresentação do projeto.
 
 ## Screenshots
 Funcionamento do BFS:
