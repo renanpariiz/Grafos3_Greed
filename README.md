@@ -35,6 +35,9 @@ DFS(grafo):
 - Detecta ciclos (grupos fechados)
 - Identifica componentes conectados (grupos independentes na rede)
 
+### Vídeo da Apresentação:
+Aqui está disponível o [vídeo](https://youtu.be/7YNiwFkt3HU?si=U1KO09NTYJqX9MZH) da apresentação do projeto.
+
 ## Screenshots
 Funcionamento do BFS:
 <center>
