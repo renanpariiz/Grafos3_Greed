@@ -27,7 +27,7 @@ O **Interval Scheduling** é ideal para selecionar o maior número possível de 
 - **Objetivo:** Escolher o maior subconjunto de aulas que podem ser atribuídas a um único professor, sem sobreposição de horários.
 - O algoritmo seleciona as aulas com os **menores horários de término primeiro**, garantindo o melhor uso do tempo disponível.
 
-### ✅ Função: `IntervalScheduling(aulas)`
+### Função: `IntervalScheduling(aulas)`
 - Retorna o **maior número de aulas não conflitantes** para um professor.
 - Pode ser utilizado, por exemplo, para montar a agenda pessoal de um docente ou alocar turmas em um único laboratório.
 
@@ -57,7 +57,7 @@ Aqui está disponível o [vídeo]   da apresentação do projeto.
 ## Screenshots
 Funcionamento do Interval Schedule:
 <center>
-  <img src="assets/Scheduling.png" alt="IntervalScheduling">
+  <img src="assets/scheduling.png" alt="IntervalScheduling">
   
 </center>
 

@@ -40,7 +40,6 @@ else:
     # Executa o algoritmo de Interval Scheduling
     aulas_selecionadas = interval_scheduling(lista_aulas)
 
-    # Imprime o resultado
     print("Aulas selecionadas (Interval Scheduling):")
     if aulas_selecionadas:
         for aula_id in aulas_selecionadas:
