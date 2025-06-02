@@ -1,7 +1,7 @@
-# Rede Social
+# Algortimos Gulosos
 
-**Número da Lista**: 1<br>
-**Conteúdo da Disciplina**: Grafos 1<br>
+**Número da Lista**: 3<br>
+**Conteúdo da Disciplina**: Grafos 3<br>
 
 ## Alunos
 |Matrícula | Aluno |
@@ -10,44 +10,60 @@
 | 22/2006392  |  Renan Batista Gonçalves Pariz |
 
 ## Sobre 
-Para explorar os conceitos abordados na disciplina de Grafos 1, a dupla escolheu desenvolver uma aplicação prática simulando uma rede social de amizades, onde os relacionamentos entre usuários são representados por um grafo não direcionado.
+# Projeto de Aplicação: Organização de Grades Horárias com Interval Scheduling e Interval Partitioning
 
-O projeto foi dividido de forma a equilibrar o trabalho entre os integrantes, cada um responsável por implementar e testar partes específicas da lógica de grafos, como busca em largura (BFS), busca em profundidade (DFS) e detecção de componentes conexos.
+Para explorar os conceitos abordados na disciplina de **Grafos 1**, a dupla escolheu desenvolver uma aplicação prática simulando o processo de montagem de **grades horárias para professores**, onde os horários de aulas são representados como **intervalos de tempo**. O objetivo é organizar essas aulas de forma eficiente, minimizando conflitos e otimizando o uso de salas ou horários disponíveis.
 
-Aplicações de BFS (Busca em Largura)
-O BFS é ótimo para descobrir o caminho mais curto em termos de número de conexões (não em peso) entre duas pessoas.
-Exemplo prático: Graus de separação
-Objetivo: Dizer quantos graus de separação existem entre a pessoa A e B.
-É feito um BFS a partir de A até encontrar B, contando quantos níveis você percorreu.
-Pode servir pra implementar algo como: “Você e João têm 3 amigos em comum!” ou “Você está a 2 conexões de Maria”.
+O projeto foi dividido de forma a equilibrar o trabalho entre os integrantes, com cada um responsável por implementar e testar partes específicas da lógica de **algoritmos gulosos**, como o **Interval Scheduling** (agendamento ótimo de aulas) e o **Interval Partitioning** (particionamento de aulas em diferentes faixas horárias ou salas).
 
-BFS(grafo, origem, destino):
-- Retorna o grau de separação entre duas pessoas.
-- Também pode retornar o caminho entre elas.
+---
 
-Aplicações de DFS (Busca em Profundidade)
-O DFS é útil para descobrir estruturas mais "fechadas" dentro da rede, como ciclos ou componentes conectados.
-Exemplo prático: Detectar grupos fechados de amigos (ciclos).
-Objetivo: Encontrar "panelinhas", ou seja, ciclos no grafo.
-O DFS pode identificar ciclos e componentes fortemente conectados, que representam grupos onde todos se conhecem.
+## Aplicações de Interval Scheduling (Agendamento de Intervalos)
 
-DFS(grafo):
-- Detecta ciclos (grupos fechados)
-- Identifica componentes conectados (grupos independentes na rede)
+O **Interval Scheduling** é ideal para selecionar o maior número possível de aulas que **não se sobrepõem**, considerando apenas uma sala ou professor por vez.
+
+### Exemplo prático: Maximizar número de aulas atribuídas a um professor
+
+- **Objetivo:** Escolher o maior subconjunto de aulas que podem ser atribuídas a um único professor, sem sobreposição de horários.
+- O algoritmo seleciona as aulas com os **menores horários de término primeiro**, garantindo o melhor uso do tempo disponível.
+
+### ✅ Função: `IntervalScheduling(aulas)`
+- Retorna o **maior número de aulas não conflitantes** para um professor.
+- Pode ser utilizado, por exemplo, para montar a agenda pessoal de um docente ou alocar turmas em um único laboratório.
+
+---
+
+## Aplicações de Interval Partitioning (Particionamento de Intervalos)
+
+O **Interval Partitioning** é útil quando **todas as aulas precisam ser alocadas**, mas há conflitos de horário. Nesse caso, busca-se o menor número de salas (ou professores) necessário para acomodar todos os intervalos sem sobreposição.
+
+### Exemplo prático: Distribuir aulas em salas disponíveis
+
+- **Objetivo:** Atribuir todas as aulas a horários e salas sem conflitos, utilizando o **menor número possível de recursos**.
+- O algoritmo ordena os intervalos pelos horários de início e aloca cada aula à **primeira sala disponível que não tenha conflito**.
+
+### Função: `IntervalPartitioning(aulas)`
+- Retorna o **número mínimo de salas (ou professores)** necessário para realizar todas as aulas sem sobreposição.
+- Pode ser usado para montar a **grade completa de uma escola ou universidade** de forma eficiente.
+
+---
+
+Este projeto permite visualizar, de forma prática, como **algoritmos gulosos** podem ser aplicados para resolver problemas reais de organização e logística, promovendo **eficiência no uso de recursos** como salas, horários e pessoal docente.
+
 
 ### Vídeo da Apresentação:
-Aqui está disponível o [vídeo](https://youtu.be/rih0g0mAFKs?feature=shared) da apresentação do projeto.
+Aqui está disponível o [vídeo]   da apresentação do projeto.
 
 ## Screenshots
-Funcionamento do BFS:
+Funcionamento do Interval Schedule:
 <center>
-  <img src="assets/bfs1.jpg" alt="BFS">
-  <img src="assets/bfs2.jpg" alt="BFS">
+  <img src="assets/Scheduling.png" alt="IntervalScheduling">
+  
 </center>
 
-Funcionamento do DFS:
+Funcionamento do Interval Partitioning:
 <center>
-  <img src="assets/dfs.png" alt="DFS">
+  <img src="assets/dfs.png" alt="IntervalPartitioning">
 
 </center>
 
@@ -55,5 +71,5 @@ Funcionamento do DFS:
 **Linguagem**: Python (qualquer versão a partir da versão partir da 3.6.)<br>
 
 ## Uso 
-Após garantir a instalação do Python, para rodar o código de BFS basta estar na pasta do projeto e digitar `python bfs.py` no terminal. <br>
-De maneira análoga, para rodar o código de DFS basta estar na página do projeto e digitar `python dfs.py`.
+Após garantir a instalação do Python, para rodar o código de Interval Scheduling: basta estar na pasta do projeto e digitar `python scheduling.py` no terminal. <br>
+De maneira análoga, para rodar o código de Interval Partitioning: basta estar na página do projeto e digitar `python partitioning.py`.

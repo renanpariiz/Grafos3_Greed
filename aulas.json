@@ -1,0 +1,13 @@
+{
+  "aulas": [
+    { "id": "A1", "inicio": 8, "fim": 10 },
+    { "id": "A2", "inicio": 9, "fim": 11 },
+    { "id": "A3", "inicio": 10, "fim": 12 },
+    { "id": "A4", "inicio": 11, "fim": 13 },
+    { "id": "A5", "inicio": 13, "fim": 15 },
+    { "id": "A6", "inicio": 9, "fim": 10 },
+    { "id": "A7", "inicio": 14, "fim": 16 },
+    { "id": "A8", "inicio": 8, "fim": 9 },
+    { "id": "A9", "inicio": 15, "fim": 17 }
+  ]
+}
